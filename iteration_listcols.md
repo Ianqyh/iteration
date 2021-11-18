@@ -87,22 +87,22 @@ l =
 l[[3]]
 ```
 
-    ##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-    ## -3.323523 -0.651741 -0.027881 -0.002738  0.653921  2.802510
+    ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    ## -3.11280 -0.71652 -0.04539 -0.02804  0.64654  3.25611
 
 ``` r
 l[["summary"]]
 ```
 
-    ##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-    ## -3.323523 -0.651741 -0.027881 -0.002738  0.653921  2.802510
+    ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    ## -3.11280 -0.71652 -0.04539 -0.02804  0.64654  3.25611
 
 ``` r
 l$summary
 ```
 
-    ##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-    ## -3.323523 -0.651741 -0.027881 -0.002738  0.653921  2.802510
+    ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    ## -3.11280 -0.71652 -0.04539 -0.02804  0.64654  3.25611
 
 ## List of normals
 
@@ -121,7 +121,7 @@ mean_and_sd(list_norms[[1]])
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  2.12  1.11
+    ## 1  2.09 0.921
 
 ## for loop
 
@@ -176,45 +176,44 @@ listcol_df %>% pull(norms)
 ```
 
     ## $a
-    ##  [1]  3.47787783  2.09894786  1.64561770  3.30361460  3.04707288  2.77559058
-    ##  [7]  1.57573047  3.20611659 -0.12846592  3.09952222  3.83437882  0.21220153
-    ## [13]  1.36046039  1.32721034  2.93805405  1.98545644  2.13557979  2.02872332
-    ## [19]  3.17250316  2.59867334  2.18901904  3.92796460  1.52226055  3.48703563
-    ## [25]  1.29260588  1.46455212  0.04590404  1.17254048  1.25169905  1.50277127
-    ## [31]  0.70916980  3.02029852  3.18532123  0.83543547  2.16454546  2.67362036
-    ## [37]  1.43249333  2.32667477  4.05928150  1.87085128  3.26641509  1.62453303
-    ## [43]  3.39431560  3.53807326  0.39215555 -0.34245068  1.58516986  2.18147424
-    ## [49]  1.51823887  2.78291837
+    ##  [1] 1.1852030 2.2660430 3.3587189 0.1220380 1.8761734 1.6211507 3.4212861
+    ##  [8] 1.3440008 0.8215310 1.5613426 3.3044172 2.3972736 2.1074806 1.9859222
+    ## [15] 1.5293159 1.8540953 1.3270046 2.2228399 2.1788768 0.4591707 2.4137368
+    ## [22] 2.9972648 2.1466699 2.7446573 1.3331487 2.0378465 2.0486648 2.4675600
+    ## [29] 2.7632317 1.5989876 1.9812088 1.5146265 2.3045770 3.2081698 2.9029569
+    ## [36] 1.9945974 3.9488084 1.6942873 1.7002782 1.0085075 3.3250953 1.6921481
+    ## [43] 3.3014524 4.3958316 0.1173308 3.1270924 1.1267324 1.7073464 2.5553206
+    ## [50] 1.2145929
     ## 
     ## $b
-    ##  [1]  3.3213303  3.9138351  6.2344159  9.0218339  8.7728472  4.1979108
-    ##  [7]  6.8517549  5.4032629  8.5691195  2.4164410 14.0311007  1.4546628
-    ## [13]  2.5866043  4.3218826  4.1211980  7.8464735  3.1027074  3.8399797
-    ## [19]  6.9280557  5.8762335  9.2585321  1.5741177  6.3460353  1.2353618
-    ## [25]  5.0229284  6.9251281  8.3633049  8.3091139  4.7560204  6.5532458
-    ## [31]  4.3719190  7.0132573  4.1100566  5.6793144  7.3970290  7.8784035
-    ## [37]  6.8271429  7.6519533  4.1746937  7.3608502  3.0538659 -0.7107546
-    ## [43]  6.9107889  4.6681295  6.3726897  6.5812342  6.8657481  7.4944468
-    ## [49]  3.8176430  0.5421706
+    ##  [1]  7.9753523  2.0294605  4.5069273 -0.6460872  4.0258227  4.3105315
+    ##  [7] 10.4920819  5.8575490 -1.6660392  2.8006104  7.5607398  6.4100446
+    ## [13]  7.4981130  3.9437269  4.0184743  4.4859185  8.9990283  6.1123405
+    ## [19]  3.4649448  9.4005260  3.1133071  1.9426639  8.3098975  2.0225598
+    ## [25]  1.8279037  0.7143606  3.1764971  2.0147845  8.0550732  0.9262363
+    ## [31]  3.1730368  6.3106717  7.3824567  3.7582430  7.8535254  1.5249971
+    ## [37]  8.8704050  3.3244768  6.8049227  9.3421348  4.0309896  7.4720839
+    ## [43]  4.6171178  7.9681659  6.4596653  7.5537644  2.7557683  4.4823448
+    ## [49]  8.1276638  4.1284009
     ## 
     ## $c
-    ##  [1] 21.34616 19.55115 18.03117 21.40238 19.25266 18.93476 18.89269 18.35585
-    ##  [9] 20.46320 19.02071 18.43671 18.55864 19.28607 19.26013 20.03765 20.43558
-    ## [17] 21.05495 22.45149 19.07012 22.08055 19.99618 20.40845 19.26922 21.13206
-    ## [25] 19.40679 21.75093 17.71267 20.94392 19.27582 21.69737 18.60675 18.93022
-    ## [33] 20.12141 17.98293 18.56573 18.08303 20.35573 20.02203 19.53821 17.85940
-    ## [41] 20.20885 20.67214 19.59145 19.56810 18.82043 19.18323 19.50718 20.40672
-    ## [49] 18.85228 17.08895
+    ##  [1] 20.38376 17.87705 18.99976 20.38501 18.88123 19.59413 20.06095 20.77666
+    ##  [9] 20.04453 20.54948 19.96011 21.67164 20.45196 20.65111 20.83397 19.43294
+    ## [17] 19.36026 18.38081 21.38620 19.38074 20.65323 21.38007 20.82532 18.41521
+    ## [25] 19.81499 20.08493 18.40748 19.41899 21.23676 20.10358 20.78507 18.71688
+    ## [33] 20.55776 20.02243 19.95846 20.20619 20.31964 21.07155 18.77637 19.72349
+    ## [41] 18.77973 21.11348 18.59199 17.40377 19.11990 17.29447 19.32063 20.89118
+    ## [49] 20.30895 21.05653
     ## 
     ## $d
-    ##  [1] -11.16730 -12.24012 -12.10986 -11.20821 -13.18809 -11.36391 -12.10266
-    ##  [8] -12.51690 -11.39123 -10.83105 -12.06986 -12.27355 -11.87703 -12.17543
-    ## [15] -12.71549 -11.85513 -11.70228 -12.23287 -12.32574 -11.06117 -11.98099
-    ## [22] -12.65138 -11.65072 -12.02684 -12.24379 -11.66123 -12.11147 -11.55200
-    ## [29] -11.26934 -10.95912 -12.98097 -12.15211 -12.04984 -12.12604 -11.72491
-    ## [36] -11.83357 -11.87793 -11.01337 -11.61063 -12.87908 -12.20107 -12.16697
-    ## [43] -12.02446 -11.58285 -12.25700 -12.26232 -11.58118 -11.86718 -11.56553
-    ## [50] -12.00891
+    ##  [1] -12.38493 -11.73198 -12.18145 -12.00085 -12.25298 -11.81612 -10.31377
+    ##  [8] -12.07843 -11.69482 -12.85299 -10.85287 -12.42854 -12.45839 -11.44673
+    ## [15] -11.66956 -12.57903 -12.09273 -11.95404 -12.65772 -12.02105 -12.26362
+    ## [22] -12.41379 -12.23697 -11.81490 -11.23961 -11.86417 -11.51199 -12.99082
+    ## [29] -12.78458 -13.02320 -12.11269 -11.82824 -12.20960 -12.50708 -11.49175
+    ## [36] -11.68654 -12.81725 -10.86039 -11.73381 -11.79526 -12.76963 -11.02074
+    ## [43] -11.87297 -12.68378 -12.79340 -11.54172 -12.90829 -11.64100 -12.02963
+    ## [50] -12.76300
 
 ``` r
 mean_and_sd(listcol_df$norms[[1]])
@@ -223,7 +222,7 @@ mean_and_sd(listcol_df$norms[[1]])
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  2.12  1.11
+    ## 1  2.09 0.921
 
 ``` r
 listcol_df %>%
@@ -409,78 +408,78 @@ map(urls, get_page_reviews)
 
     ## [[1]]
     ## # A tibble: 10 × 3
-    ##    title                                                 stars   text           
-    ##    <chr>                                                 <chr>   <chr>          
-    ##  1 it was                                                5.0 ou… "\n  mad good …
-    ##  2 Fun!                                                  4.0 ou… "\n  Fun and e…
-    ##  3 Vintage                                               5.0 ou… "\n  Easy to o…
-    ##  4 too many commercials                                  1.0 ou… "\n  5 minutes…
-    ##  5 this film is so good!                                 5.0 ou… "\n  VOTE FOR …
-    ##  6 Good movie                                            5.0 ou… "\n  Weird sto…
-    ##  7 I Just everyone to know this....                      5.0 ou… "\n  VOTE FOR …
-    ##  8 the cobweb in his hair during the bike ramp scene lol 5.0 ou… "\n  5 stars f…
-    ##  9 Best quirky movie ever                                5.0 ou… "\n  You all k…
-    ## 10 Classic Film                                          5.0 ou… "\n  Had to or…
+    ##    title                            stars              text                     
+    ##    <chr>                            <chr>              <chr>                    
+    ##  1 no brainer                       5.0 out of 5 stars "\n  watched this with m…
+    ##  2 Yeah., it was pretty good.       5.0 out of 5 stars "\n  Yeah, it was pretty…
+    ##  3 Love it                          5.0 out of 5 stars "\n  Didn't like this wh…
+    ##  4 it was                           5.0 out of 5 stars "\n  mad good yo\n"      
+    ##  5 Fun!                             4.0 out of 5 stars "\n  Fun and entertainin…
+    ##  6 Vintage                          5.0 out of 5 stars "\n  Easy to order. I th…
+    ##  7 too many commercials             1.0 out of 5 stars "\n  5 minutes into the …
+    ##  8 this film is so good!            5.0 out of 5 stars "\n  VOTE FOR PEDRO!\n"  
+    ##  9 Good movie                       5.0 out of 5 stars "\n  Weird story, goofy …
+    ## 10 I Just everyone to know this.... 5.0 out of 5 stars "\n  VOTE FOR PEDRO !!!!…
     ## 
     ## [[2]]
     ## # A tibble: 10 × 3
-    ##    title                             stars              text                    
-    ##    <chr>                             <chr>              <chr>                   
-    ##  1 hehehehe                          5.0 out of 5 stars "\n  goodjobboys\n"     
-    ##  2 Painful                           1.0 out of 5 stars "\n  I think I sneezed …
-    ##  3 GRAND                             5.0 out of 5 stars "\n  GRAND\n"           
-    ##  4 Hello, 90s                        5.0 out of 5 stars "\n  So nostalgic movie…
-    ##  5 Cult Classic                      5.0 out of 5 stars "\n  Watched it with my…
-    ##  6 Format was inaccurate             4.0 out of 5 stars "\n  There was an optio…
-    ##  7 Good funny                        3.0 out of 5 stars "\n  Would recommend\n" 
-    ##  8 Not available w/in 48 hour window 1.0 out of 5 stars "\n  I couldn't watch i…
-    ##  9 Your mom went to college.         5.0 out of 5 stars "\n  Classic funny movi…
-    ## 10 Very funny movie                  5.0 out of 5 stars "\n  I watch this movie…
+    ##    title                                                 stars   text           
+    ##    <chr>                                                 <chr>   <chr>          
+    ##  1 the cobweb in his hair during the bike ramp scene lol 5.0 ou… "\n  5 stars f…
+    ##  2 Best quirky movie ever                                5.0 ou… "\n  You all k…
+    ##  3 Classic Film                                          5.0 ou… "\n  Had to or…
+    ##  4 hehehehe                                              5.0 ou… "\n  goodjobbo…
+    ##  5 Painful                                               1.0 ou… "\n  I think I…
+    ##  6 GRAND                                                 5.0 ou… "\n  GRAND\n"  
+    ##  7 Hello, 90s                                            5.0 ou… "\n  So nostal…
+    ##  8 Cult Classic                                          5.0 ou… "\n  Watched i…
+    ##  9 Format was inaccurate                                 4.0 ou… "\n  There was…
+    ## 10 Good funny                                            3.0 ou… "\n  Would rec…
     ## 
     ## [[3]]
     ## # A tibble: 10 × 3
     ##    title                                       stars              text          
     ##    <chr>                                       <chr>              <chr>         
-    ##  1 Watch it twice! Trust me!                   5.0 out of 5 stars "\n  Nothing …
-    ##  2 A classic                                   5.0 out of 5 stars "\n  If you d…
-    ##  3 Can't say how many times I've seen          5.0 out of 5 stars "\n  Such a g…
-    ##  4 I pity the fool who doesn’t own this movie. 5.0 out of 5 stars "\n  I love t…
-    ##  5 I don’t know why it’s so popular!           2.0 out of 5 stars "\n  My girlf…
-    ##  6 Okay                                        3.0 out of 5 stars "\n  Okay\n"  
-    ##  7 A WHOLESOME comedic journey                 5.0 out of 5 stars "\n  Not a mo…
-    ##  8 Hilarious                                   5.0 out of 5 stars "\n  Funny\n" 
-    ##  9 Love it                                     5.0 out of 5 stars "\n  What of …
-    ## 10 WORTH IT!                                   5.0 out of 5 stars "\n  It's the…
+    ##  1 Not available w/in 48 hour window           1.0 out of 5 stars "\n  I couldn…
+    ##  2 Your mom went to college.                   5.0 out of 5 stars "\n  Classic …
+    ##  3 Very funny movie                            5.0 out of 5 stars "\n  I watch …
+    ##  4 Watch it twice! Trust me!                   5.0 out of 5 stars "\n  Nothing …
+    ##  5 A classic                                   5.0 out of 5 stars "\n  If you d…
+    ##  6 Can't say how many times I've seen          5.0 out of 5 stars "\n  Such a g…
+    ##  7 I pity the fool who doesn’t own this movie. 5.0 out of 5 stars "\n  I love t…
+    ##  8 I don’t know why it’s so popular!           2.0 out of 5 stars "\n  My girlf…
+    ##  9 Okay                                        3.0 out of 5 stars "\n  Okay\n"  
+    ## 10 A WHOLESOME comedic journey                 5.0 out of 5 stars "\n  Not a mo…
     ## 
     ## [[4]]
     ## # A tibble: 10 × 3
     ##    title                                         stars              text        
     ##    <chr>                                         <chr>              <chr>       
-    ##  1 Funny movie.                                  5.0 out of 5 stars "\n  Great …
-    ##  2 Best movie ever!                              5.0 out of 5 stars "\n  Got th…
-    ##  3 I was stuck in the oil patch back in the day. 5.0 out of 5 stars "\n  I watc…
-    ##  4 Funny Dork humor                              5.0 out of 5 stars "\n  Humor …
-    ##  5 Still funny!                                  5.0 out of 5 stars "\n  Still …
-    ##  6 Love it!! 💜                                  5.0 out of 5 stars "\n  Love i…
-    ##  7 LOVE it                                       5.0 out of 5 stars "\n  cult c…
-    ##  8 Perfect                                       5.0 out of 5 stars "\n  Exactl…
-    ##  9 Love this movie!                              5.0 out of 5 stars "\n  Great …
-    ## 10 Love it                                       5.0 out of 5 stars "\n  Love t…
+    ##  1 Hilarious                                     5.0 out of 5 stars "\n  Funny\…
+    ##  2 Love it                                       5.0 out of 5 stars "\n  What o…
+    ##  3 WORTH IT!                                     5.0 out of 5 stars "\n  It's t…
+    ##  4 Funny movie.                                  5.0 out of 5 stars "\n  Great …
+    ##  5 Best movie ever!                              5.0 out of 5 stars "\n  Got th…
+    ##  6 I was stuck in the oil patch back in the day. 5.0 out of 5 stars "\n  I watc…
+    ##  7 Funny Dork humor                              5.0 out of 5 stars "\n  Humor …
+    ##  8 Still funny!                                  5.0 out of 5 stars "\n  Still …
+    ##  9 Love it!! 💜                                  5.0 out of 5 stars "\n  Love i…
+    ## 10 LOVE it                                       5.0 out of 5 stars "\n  cult c…
     ## 
     ## [[5]]
     ## # A tibble: 10 × 3
-    ##    title                             stars              text                    
-    ##    <chr>                             <chr>              <chr>                   
-    ##  1 As described                      3.0 out of 5 stars "\n  Book is as describ…
-    ##  2 GOSH!!!                           5.0 out of 5 stars "\n  Just watch the mov…
-    ##  3 Watch it right now                5.0 out of 5 stars "\n  You need to watch …
-    ##  4 At this point it’s an addiction   5.0 out of 5 stars "\n  I watch this movie…
-    ##  5 💕                                5.0 out of 5 stars "\n  Hands down, one of…
-    ##  6 Good dumb movie                   5.0 out of 5 stars "\n  I really wanted to…
-    ##  7 funny                             5.0 out of 5 stars "\n  so funny and inven…
-    ##  8 Best Movie- Try to prove me wrong 5.0 out of 5 stars "\n  Best movie ever\n" 
-    ##  9 Vote For Pedro!!                  5.0 out of 5 stars "\n  What is NOT to lik…
-    ## 10 So Funny                          5.0 out of 5 stars "\n  This is such a goo…
+    ##    title                           stars              text                      
+    ##    <chr>                           <chr>              <chr>                     
+    ##  1 Perfect                         5.0 out of 5 stars "\n  Exactly what I asked…
+    ##  2 Love this movie!                5.0 out of 5 stars "\n  Great movie and sent…
+    ##  3 Love it                         5.0 out of 5 stars "\n  Love this movie. How…
+    ##  4 As described                    3.0 out of 5 stars "\n  Book is as described…
+    ##  5 GOSH!!!                         5.0 out of 5 stars "\n  Just watch the movie…
+    ##  6 Watch it right now              5.0 out of 5 stars "\n  You need to watch th…
+    ##  7 At this point it’s an addiction 5.0 out of 5 stars "\n  I watch this movie w…
+    ##  8 💕                              5.0 out of 5 stars "\n  Hands down, one of m…
+    ##  9 Good dumb movie                 5.0 out of 5 stars "\n  I really wanted to s…
+    ## 10 funny                           5.0 out of 5 stars "\n  so funny and inventi…
 
 ``` r
 napoleon_df =
@@ -498,16 +497,16 @@ napoleon_df %>%
     ## Please use `cols = c(reviews)`
 
     ## # A tibble: 50 × 3
-    ##    title                                                 stars   text           
-    ##    <chr>                                                 <chr>   <chr>          
-    ##  1 it was                                                5.0 ou… "\n  mad good …
-    ##  2 Fun!                                                  4.0 ou… "\n  Fun and e…
-    ##  3 Vintage                                               5.0 ou… "\n  Easy to o…
-    ##  4 too many commercials                                  1.0 ou… "\n  5 minutes…
-    ##  5 this film is so good!                                 5.0 ou… "\n  VOTE FOR …
-    ##  6 Good movie                                            5.0 ou… "\n  Weird sto…
-    ##  7 I Just everyone to know this....                      5.0 ou… "\n  VOTE FOR …
-    ##  8 the cobweb in his hair during the bike ramp scene lol 5.0 ou… "\n  5 stars f…
-    ##  9 Best quirky movie ever                                5.0 ou… "\n  You all k…
-    ## 10 Classic Film                                          5.0 ou… "\n  Had to or…
+    ##    title                            stars              text                     
+    ##    <chr>                            <chr>              <chr>                    
+    ##  1 no brainer                       5.0 out of 5 stars "\n  watched this with m…
+    ##  2 Yeah., it was pretty good.       5.0 out of 5 stars "\n  Yeah, it was pretty…
+    ##  3 Love it                          5.0 out of 5 stars "\n  Didn't like this wh…
+    ##  4 it was                           5.0 out of 5 stars "\n  mad good yo\n"      
+    ##  5 Fun!                             4.0 out of 5 stars "\n  Fun and entertainin…
+    ##  6 Vintage                          5.0 out of 5 stars "\n  Easy to order. I th…
+    ##  7 too many commercials             1.0 out of 5 stars "\n  5 minutes into the …
+    ##  8 this film is so good!            5.0 out of 5 stars "\n  VOTE FOR PEDRO!\n"  
+    ##  9 Good movie                       5.0 out of 5 stars "\n  Weird story, goofy …
+    ## 10 I Just everyone to know this.... 5.0 out of 5 stars "\n  VOTE FOR PEDRO !!!!…
     ## # … with 40 more rows
